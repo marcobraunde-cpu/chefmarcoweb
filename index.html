@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marco Braun — Executive Chef</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Montserrat:wght@300;400&display=swap');
+
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --gold: #b8963e;
+      --gold-light: #d4af6a;
+      --bg: #0a0a0a;
+      --surface: #111111;
+      --text: #e8e0d0;
+      --muted: #7a7060;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 300;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      letter-spacing: 0.04em;
+    }
+
+    .container {
+      text-align: center;
+      padding: 3rem 2rem;
+      max-width: 560px;
+      width: 100%;
+    }
+
+    .rule {
+      width: 40px;
+      height: 1px;
+      background: var(--gold);
+      margin: 0 auto;
+    }
+
+    .rule.wide {
+      width: 100%;
+      max-width: 320px;
+      opacity: 0.25;
+    }
+
+    .monogram {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.5rem;
+      font-weight: 300;
+      color: var(--gold);
+      letter-spacing: 0.18em;
+      line-height: 1;
+      margin: 2rem 0 0.5rem;
+    }
+
+    .name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.6rem;
+      font-weight: 300;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--text);
+      line-height: 1.1;
+    }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin: 1.6rem auto;
+      max-width: 280px;
+    }
+
+    .divider span {
+      flex: 1;
+      height: 1px;
+      background: var(--gold);
+      opacity: 0.4;
+    }
+
+    .divider svg {
+      width: 10px;
+      height: 10px;
+      fill: var(--gold);
+      opacity: 0.7;
+      flex-shrink: 0;
+    }
+
+    .title {
+      font-size: 0.68rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 3rem;
+    }
+
+    .contact-label {
+      font-size: 0.6rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.6rem;
+    }
+
+    .contact-link {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.05rem;
+      font-style: italic;
+      font-weight: 300;
+      color: var(--text);
+      text-decoration: none;
+      letter-spacing: 0.06em;
+      transition: color 0.3s ease;
+      border-bottom: 1px solid transparent;
+      padding-bottom: 2px;
+    }
+
+    .contact-link:hover {
+      color: var(--gold-light);
+      border-bottom-color: var(--gold-light);
+    }
+
+    footer {
+      position: fixed;
+      bottom: 2rem;
+      font-size: 0.55rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--muted);
+      opacity: 0.5;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="rule"></div>
+
+    <div class="monogram">MB</div>
+    <h1 class="name">Marco Braun</h1>
+
+    <div class="divider">
+      <span></span>
+      <svg viewBox="0 0 10 10"><polygon points="5,0 6.5,3.5 10,3.8 7.5,6.2 8.1,10 5,8 1.9,10 2.5,6.2 0,3.8 3.5,3.5"/></svg>
+      <span></span>
+    </div>
+
+    <p class="title">Executive Chef</p>
+
+    <div class="rule wide"></div>
+
+    <div style="margin-top: 2.8rem;">
+      <p class="contact-label">Contact</p>
+      <a class="contact-link" href="mailto:marcobraun.de@gmail.com">marcobraun.de@gmail.com</a>
+    </div>
+  </div>
+
+  <footer>Est. Germany</footer>
+
+</body>
+</html>
