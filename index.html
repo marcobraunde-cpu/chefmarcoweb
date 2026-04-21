@@ -3,168 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Marco Braun — Executive Chef</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Montserrat:wght@300;400&display=swap');
-
-    *, *::before, *::after {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    :root {
-      --gold: #b8963e;
-      --gold-light: #d4af6a;
-      --bg: #0a0a0a;
-      --surface: #111111;
-      --text: #e8e0d0;
-      --muted: #7a7060;
-    }
-
-    html, body {
-      height: 100%;
-    }
-
-    body {
-      background-color: var(--bg);
-      color: var(--text);
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 300;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      letter-spacing: 0.04em;
-    }
-
-    .container {
-      text-align: center;
-      padding: 3rem 2rem;
-      max-width: 560px;
-      width: 100%;
-    }
-
-    .rule {
-      width: 40px;
-      height: 1px;
-      background: var(--gold);
-      margin: 0 auto;
-    }
-
-    .rule.wide {
-      width: 100%;
-      max-width: 320px;
-      opacity: 0.25;
-    }
-
-    .monogram {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 3.5rem;
-      font-weight: 300;
-      color: var(--gold);
-      letter-spacing: 0.18em;
-      line-height: 1;
-      margin: 2rem 0 0.5rem;
-    }
-
-    .name {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 2.6rem;
-      font-weight: 300;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--text);
-      line-height: 1.1;
-    }
-
-    .name-secondary {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.3rem;
-      font-weight: 300;
-      font-style: italic;
-      letter-spacing: 0.18em;
-      color: var(--muted);
-      margin-top: 0.4rem;
-    }
-
-    .divider {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin: 1.6rem auto;
-      max-width: 280px;
-    }
-
-    .divider span {
-      flex: 1;
-      height: 1px;
-      background: var(--gold);
-      opacity: 0.4;
-    }
-
-    .divider svg {
-      width: 10px;
-      height: 10px;
-      fill: var(--gold);
-      opacity: 0.7;
-      flex-shrink: 0;
-    }
-
-    .title {
-      font-size: 0.68rem;
-      letter-spacing: 0.35em;
-      text-transform: uppercase;
-      color: var(--gold-light);
-      margin-bottom: 3rem;
-    }
-
-    .contact-label {
-      font-size: 0.6rem;
-      letter-spacing: 0.3em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 0.6rem;
-    }
-
-    .contact-link {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.05rem;
-      font-style: italic;
-      font-weight: 300;
-      color: var(--text);
-      text-decoration: none;
-      letter-spacing: 0.06em;
-      transition: color 0.3s ease;
-      border-bottom: 1px solid transparent;
-      padding-bottom: 2px;
-    }
-
-    .contact-link:hover {
-      color: var(--gold-light);
-      border-bottom-color: var(--gold-light);
-    }
-
-    footer {
-      position: fixed;
-      bottom: 2rem;
-      font-size: 0.55rem;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: var(--muted);
-      opacity: 0.5;
-    }
-  </style>
+  <title>Chef Marco Braun — Executive Chef</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-  <div class="container">
-    <div class="rule"></div>
+<nav class="nav">
+  <a href="index.html" class="nav-brand">Chef Marco</a>
+  <button class="nav-toggle" id="navToggle">&#9776;</button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="experience.html">Experience</a></li>
+    <li><a href="milestones.html">Milestones</a></li>
+    <li><a href="dishes.html">Dishes</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="press.html">Press</a></li>
+    <li><a href="team.html">My Team</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
 
-    <div class="monogram">MB</div>
-    <h1 class="name">Marco Braun</h1>
-    <p class="name-secondary">Habibie Son</p>
+<div class="page-content">
+  <section class="hero">
+    <p class="eyebrow">Executive Chef &nbsp;·&nbsp; Central Java, Indonesia</p>
+    <h1 class="hero-name">Chef Marco</h1>
+    <p class="hero-title">
+      Executive Chef &nbsp;|&nbsp; Culinary Strategist &nbsp;|&nbsp; F&amp;B Division Leader
+    </p>
 
     <div class="divider">
       <span></span>
@@ -172,17 +38,40 @@
       <span></span>
     </div>
 
-    <p class="title">Executive Chef</p>
+    <p class="hero-quote">"The longer I cook, the less ingredients I use in one dish."</p>
+    <p class="hero-quote-by">Quality Produce &nbsp;·&nbsp; Perfect Cooking Methods</p>
 
-    <div class="rule wide"></div>
-
-    <div style="margin-top: 2.8rem;">
-      <p class="contact-label">Contact</p>
-      <a class="contact-link" href="mailto:marcobraun.de@gmail.com">marcobraun.de@gmail.com</a>
+    <div class="hero-stats">
+      <div>
+        <span class="stat-num">20+</span>
+        <span class="stat-label">Years of Experience</span>
+      </div>
+      <div>
+        <span class="stat-num">3</span>
+        <span class="stat-label">Continents</span>
+      </div>
+      <div>
+        <span class="stat-num">15K</span>
+        <span class="stat-label">Max Covers Delivered</span>
+      </div>
+      <div>
+        <span class="stat-num">10+</span>
+        <span class="stat-label">Luxury Brands</span>
+      </div>
     </div>
-  </div>
 
-  <footer>Est. Germany</footer>
+    <div class="cta-row">
+      <a href="experience.html" class="btn btn-gold">View Career</a>
+      <a href="contact.html" class="btn btn-outline">Get in Touch</a>
+    </div>
+  </section>
+</div>
 
+<footer class="site-footer">
+  <div class="footer-brand">Chef Marco Braun</div>
+  <div class="footer-copy">&copy; 2026 Marco Braun &mdash; Executive Chef &nbsp;|&nbsp; All Rights Reserved</div>
+</footer>
+
+<script src="js/main.js"></script>
 </body>
 </html>
