@@ -402,6 +402,8 @@ body {
   color: var(--text-muted);
   opacity: 0.4;
 }
+.dish-img--photo { display: block; padding: 0; }
+.dish-img--photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .dish-info { padding: 1.5rem; }
 .dish-info h3 {
   font-family: 'Cormorant Garamond', serif;
