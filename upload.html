@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Upload Image</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .upload-wrap {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      text-align: center;
+    }
+    .upload-box {
+      border: 2px dashed rgba(184,150,62,0.4);
+      padding: 4rem 3rem;
+      max-width: 480px;
+      width: 100%;
+      cursor: pointer;
+      transition: border-color 0.3s;
+    }
+    .upload-box:hover { border-color: var(--gold); }
+    .upload-box h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      font-weight: 300;
+      color: var(--gold-light);
+      margin-bottom: 0.5rem;
+    }
+    .upload-box p { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 2rem; }
+    input[type="file"] { display: none; }
+    label.pick {
+      display: inline-block;
+      padding: 0.8rem 2rem;
+      background: var(--gold);
+      color: #0a0a0a;
+      font-size: 0.6rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    label.pick:hover { background: var(--gold-light); }
+    #preview { max-width: 300px; margin-top: 1.5rem; border: 1px solid var(--border); display: none; }
+    .submit-btn {
+      margin-top: 1.5rem;
+      padding: 0.8rem 2.5rem;
+      background: var(--gold);
+      color: #0a0a0a;
+      border: none;
+      font-size: 0.6rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      cursor: pointer;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+<div class="upload-wrap">
+  <form method="POST" enctype="multipart/form-data" id="uploadForm">
+    <div class="upload-box">
+      <h2>Upload Dish Image</h2>
+      <p>Select any photo from your computer — it will be saved directly to the website's images folder.</p>
+      <label class="pick" for="fileInput">Choose Image</label>
+      <input type="file" id="fileInput" name="file" accept="image/*" onchange="preview(this)" />
+      <br/>
+      <img id="preview" src="" alt="preview" />
+      <br/>
+      <button type="submit" class="submit-btn" id="submitBtn">Upload to Website</button>
+    </div>
+  </form>
+</div>
+<script>
+  function preview(input) {
+    if (input.files && input.files[0]) {
+      const reader = new FileReader();
+      reader.onload = e => {
+        const img = document.getElementById('preview');
+        img.src = e.target.result;
+        img.style.display = 'block';
+        document.getElementById('submitBtn').style.display = 'inline-block';
+      };
+      reader.readAsDataURL(input.files[0]);
+    }
+  }
+</script>
+</body>
+</html>
