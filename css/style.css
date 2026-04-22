@@ -397,6 +397,51 @@ body {
 }
 .brand-tag:hover { border-color: var(--gold); color: var(--gold-light); }
 
+/* ── ABOUT CINEMATIC STRIP ── */
+.about-cinematic {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  overflow: hidden;
+}
+.about-cinematic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+  filter: grayscale(20%) brightness(0.6);
+}
+.about-cinematic__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(10,10,10,0.75) 0%, rgba(10,10,10,0.2) 60%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 6rem;
+}
+.about-cinematic__quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.6rem, 3.5vw, 2.6rem);
+  font-style: italic;
+  font-weight: 300;
+  color: #fff;
+  max-width: 620px;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+.about-cinematic__attr {
+  font-size: 0.6rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+}
+@media (max-width: 768px) {
+  .about-cinematic { height: 380px; }
+  .about-cinematic__overlay { padding: 0 2rem; }
+}
+
 /* ── TIMELINE ── */
 .timeline { position: relative; padding-left: 1.5rem; }
 .timeline::before {
