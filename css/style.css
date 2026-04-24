@@ -688,6 +688,8 @@ body {
   color: var(--text-muted);
   opacity: 0.4;
 }
+.team-img--photo { display: block; padding: 0; }
+.team-img--photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
 .team-label { padding: 1.3rem 1.5rem; }
 .team-label h3 {
   font-family: 'Cormorant Garamond', serif;
