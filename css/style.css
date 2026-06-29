@@ -698,35 +698,30 @@ body {
 }
 
 /* ── PRESS ── */
-.press-note { font-size: 0.82rem; color: var(--text-muted); font-style: italic; margin-bottom: 2.5rem; }
-.press-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
+.press-holding {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 3rem 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.press-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-left: 3px solid var(--gold);
-  padding: 2rem;
+.press-holding__rule {
+  width: 80px;
+  height: 1px;
+  background: var(--gold);
+  opacity: 0.4;
+  margin: 2rem 0;
 }
-.press-source {
-  font-size: 0.58rem;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 1rem;
-}
-.press-card blockquote {
+.press-holding__text {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   font-style: italic;
   font-weight: 300;
-  color: var(--text);
-  line-height: 1.65;
-  margin-bottom: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.8;
 }
-.press-date { font-size: 0.65rem; color: var(--text-muted); }
 
 /* ── TEAM ── */
 .team-hero-section {
